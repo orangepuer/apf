@@ -5,7 +5,7 @@ table
     tr
       th Blog Title
       th Body
-      th
+      th(colspan='4')
       th
       th
 
@@ -14,6 +14,7 @@ table
       tr
         td = blog.title
         td = blog.body
+        td = link_to blog.status, toggle_status_blog_path(blog)
         td = link_to 'Show', blog
         td = link_to 'Edit', edit_blog_path(blog)
         td = link_to 'Delete Post', blog, data: { confirm: 'Are you sure?' }, method: :delete
