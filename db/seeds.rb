@@ -25,3 +25,7 @@ end
                     main_image: "https://placehold.it/600x400",
                     thumb_image: "https://placehold.it/350x200")
 end
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(name: "Technology #{technology}")
+end
