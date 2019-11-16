@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/orangepuer/apf_view_tool
+  revision: 1b4f90b105607d4f215bae50637cd6e5358c6cfe
+  specs:
+    apf_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -241,6 +247,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  apf_view_tool!
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.3.1)
   byebug
