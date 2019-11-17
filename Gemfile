@@ -31,6 +31,7 @@ gem 'devise'
 gem 'friendly_id', '~> 5.2.4'
 gem 'bootstrap', '~> 4.3.1'
 gem 'apf_view_tool', git: 'https://github.com/orangepuer/apf_view_tool'
+gem 'cancancan'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
