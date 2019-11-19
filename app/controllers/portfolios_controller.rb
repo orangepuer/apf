@@ -2,6 +2,8 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
   layout 'portfolio'
 
+  authorize_resource
+
   def index
     @portfolio_items = Portfolio.all
   end

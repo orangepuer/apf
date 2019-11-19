@@ -2,6 +2,8 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout 'blog'
 
+  authorize_resource
+
   def index
     @blogs = Blog.all
     @page_title = 'My portfolio blog'
