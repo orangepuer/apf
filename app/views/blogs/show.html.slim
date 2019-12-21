@@ -1,12 +1,7 @@
-p#notice = notice
+.col-md-8.blog-main
 
-p
-  strong Title:
-  = @blog.title
-p
-  strong Body:
-  = @blog.body
+  h2= @blog.title
 
-=> link_to 'Edit', edit_blog_path(@blog)
-'|
-=< link_to 'Back', blogs_path
+  = link_to 'Edit', edit_blog_path(@blog) if can? :update, Blog
+
+  p= @blog.body

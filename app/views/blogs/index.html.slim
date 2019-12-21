@@ -1,7 +1,7 @@
+/ .col-md-8.blog-main
+/   h3.pb-4.mb-4.font-italic.border-bottom From the Firehose
+/   p = link_to 'Write a New Blog', new_blog_path if can? :create, Blog
 .col-md-8.blog-main
-  h3.pb-4.mb-4.font-italic.border-bottom From the Firehose
-  p = link_to 'Write a New Blog', new_blog_path if can? :create, Blog
-
   = render @blogs
 
   nav.blog-pagination
