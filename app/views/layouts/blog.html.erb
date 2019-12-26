@@ -18,14 +18,7 @@
 
     <main role="main" class="container">
       <div class="row">
-        <div class="col-md-8 blog-main">
-          <h3 class="pb-4 mb-4 font-italic border-bottom">
-            From the Firehose
-          </h3>
-          <p>
-            <%= link_to 'Write a New Blog', new_blog_path if can? :create, Blog %>
-          </p>
-        </div>
+        <%= render 'shared/blog_masthead' %>
         
         <%= yield %>
 
@@ -35,9 +28,7 @@
 
     </main><!-- /.container -->
 
-    <footer class="blog-footer">
-      <p><%= copyright_generator '' %></p>
-    </footer>
+    <%= render 'shared/blog_footer' %>
 
     <%= source_helper %>
   </body>
