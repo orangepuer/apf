@@ -2,8 +2,8 @@
 /   h3.pb-4.mb-4.font-italic.border-bottom From the Firehose
 /   p = link_to 'Write a New Blog', new_blog_path if can? :create, Blog
 .col-md-8.blog-main
+  = paginate @blogs
+
   = render @blogs
 
-  nav.blog-pagination
-    a.btn.btn-outline-primary href="#" Older
-    a.btn.btn-outline-secondary.disabled href="#" tabindex="-1" aria-disabled="true" Newer
+  = paginate @blogs

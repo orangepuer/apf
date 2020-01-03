@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   authorize_resource
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = 'My portfolio blog'
   end
 
