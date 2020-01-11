@@ -1,7 +1,13 @@
-div= image_tag @portfolio_item.main_image
-h1= @portfolio_item.title
-em= @portfolio_item.subtitle
-p= @portfolio_item.body
-h2 Technologies used:
-- @portfolio_item.technologies.each do |t|
-  p= t.name
+.container
+  .row
+    .col-md-7
+      = image_tag @portfolio_item.main_image
+    .col-md-5
+      h1= @portfolio_item.title
+      hr
+      em= @portfolio_item.subtitle
+      p= @portfolio_item.body
+      hr
+      h3 Technologies used:
+      - @portfolio_item.technologies.each do |t|
+        p= t.name
