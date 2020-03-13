@@ -52,6 +52,12 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def sort
+    JSON.parse(params[:order]).each do |key|
+      Portfolio.find(key['id']).update(position: key['position'])
+    end
+  end
+
   private
 
   def set_portfolio_item

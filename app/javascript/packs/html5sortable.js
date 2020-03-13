@@ -1250,4 +1250,4 @@ var sortable = (function () {
 
 }());
 
-export default sortable;
+export {sortable};
