@@ -9,7 +9,7 @@ class PortfoliosController < ApplicationController
   end
 
   def react
-    @react_portfolio_portfolio_items = Portfolio.react
+    @react_portfolio_items = Portfolio.react
   end
 
   def show
