@@ -34,6 +34,7 @@ gem 'apf_view_tool', git: 'https://github.com/orangepuer/apf_view_tool'
 gem 'cancancan'
 gem 'font-awesome-sass'
 gem 'kaminari'
+gem "cocoon"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

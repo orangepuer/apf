@@ -75,6 +75,7 @@ GEM
     builder (3.2.3)
     byebug (11.0.1)
     cancancan (3.0.1)
+    cocoon (1.2.14)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     devise (4.7.1)
@@ -267,6 +268,7 @@ DEPENDENCIES
   bootstrap (~> 4.3.1)
   byebug
   cancancan
+  cocoon
   devise
   factory_bot_rails
   font-awesome-sass
