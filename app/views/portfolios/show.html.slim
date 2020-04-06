@@ -11,3 +11,4 @@
       h3 Technologies used:
       - @portfolio_item.technologies.each do |t|
         p= t.name
+      = link_to 'Edit', edit_portfolio_path(@portfolio_item), class: 'btn btn-secondary' if can? :edit, Portfolio
