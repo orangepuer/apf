@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { FactoryBot.create(:user) }
+  let(:user) { create(:user) }
 
   it { expect(user).to have_many(:comments).dependent(:destroy) }
 
