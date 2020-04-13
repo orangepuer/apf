@@ -1,7 +1,13 @@
 .comment-card
   .card
-    .card-block
+    .card-body
       .row
-        .col-md-1
-        .col-md-11
-          = comment.content
+        .col-md-2
+          = gravatar_helper comment.user
+        .col-md-10
+          div= comment.content
+          .comment-attribution
+            ' posted by
+            span.comment-name=' comment.user.first_name
+            =' distance_of_time_in_words comment.created_at, Time.now
+            | ago
