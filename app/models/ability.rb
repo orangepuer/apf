@@ -16,7 +16,9 @@ class Ability
   end
 
   def guest_abilities
-    can :read, :all
+    can :read, Portfolio
+    can :index, Blog
+    can :show, Blog, status: 'published'
     can :react, Portfolio
   end
 
