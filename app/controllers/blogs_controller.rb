@@ -5,7 +5,12 @@ class BlogsController < ApplicationController
   authorize_resource
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if current_user.admin?
+      @blogs = Blog.recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.recent.published.page(params[:page]).per(5)
+    end
+
     @page_title = 'My portfolio blog'
   end
 
