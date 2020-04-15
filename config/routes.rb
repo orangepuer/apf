@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
   end
+  resources :topics, only: [:index, :show]
+
   get 'react-items', to: 'portfolios#react'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 

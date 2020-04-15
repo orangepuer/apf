@@ -3,6 +3,7 @@
     From the Firehose
   </h3>
   <p>
-    <%= link_to 'Write a New Blog', new_blog_path if can? :create, Blog %>
+    <span><%= link_to 'Write a New Blog', new_blog_path if can? :create, Blog %></span>
+    <span><%= link_to 'Topics', topics_path %></span>
   </p>
 </div>
