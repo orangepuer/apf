@@ -14,6 +14,11 @@
     = f.collection_select :topic_id, Topic.all, :id, :title,
             { selected: @blog.topic_id, include_blank: true }, class: 'form-control'
   .form-group
+    = f.radio_button :status, 'draft'
+    =' f.label :status, 'Draft'
+    = f.radio_button :status, 'published'
+    = f.label :status, 'Published'
+  .form-group
     = f.label :body
     = f.text_area :body, class: 'form-control', rows: 15
   .form-group = f.submit 'Submit', class: 'btn btn-primary'
