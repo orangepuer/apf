@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_sidebar_topics, except: [:create, :update, :destroy, :toggle_status]
+
   layout 'blog'
 
   authorize_resource
@@ -69,11 +71,16 @@ class BlogsController < ApplicationController
   end
 
   private
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
 
-    def blog_params
-      params.require(:blog).permit(:title, :body, :topic_id)
-    end
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
+
+  def set_sidebar_topics
+    @side_bar_topics = Topic.with_blogs
+  end
+
+  def blog_params
+    params.require(:blog).permit(:title, :body, :topic_id)
+  end
 end
