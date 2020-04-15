@@ -2,6 +2,8 @@
 
   h2= @blog.title
 
+  p= @blog.topic.title
+
   = link_to 'Edit', edit_blog_path(@blog) if can? :update, Blog
 
   p= @blog.body
