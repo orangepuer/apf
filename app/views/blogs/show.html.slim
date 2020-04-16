@@ -6,7 +6,7 @@
 
   = link_to 'Edit', edit_blog_path(@blog) if can? :update, Blog
 
-  p= @blog.body
+  p= markdown @blog.body
 
   = render 'comments/comment_form'
 

@@ -76,6 +76,7 @@ GEM
     byebug (11.0.1)
     cancancan (3.0.1)
     cocoon (1.2.14)
+    coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     devise (4.7.1)
@@ -174,6 +175,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redcarpet (3.5.0)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -269,6 +271,7 @@ DEPENDENCIES
   byebug
   cancancan
   cocoon
+  coderay
   devise
   factory_bot_rails
   font-awesome-sass
@@ -279,6 +282,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 6.0.0)
+  redcarpet
   rspec-rails (= 4.0.0.beta2)
   sass-rails (~> 5)
   shoulda-matchers
