@@ -2,9 +2,19 @@
 
   h2= @blog.title
 
-  p= @blog.topic.title
-
-  = link_to 'Edit', edit_blog_path(@blog) if can? :update, Blog
+  nav aria-label="breadcrumb"
+    ol.breadcrumb
+      li.breadcrumb-item
+        = link_to 'Home', root_path
+      li.breadcrumb-item
+        = link_to @blog.topic.title, topic_path(@blog.topic)
+      li.breadcrumb-item.active aria-current="page"= @blog.title
+      li.blog-links
+        = link_to icon('fas', 'pen-square'),
+              edit_blog_path(@blog) if can? :update, Blog
+      li.blog-links
+        = link_to icon('fas', 'trash'),
+                blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, Blog
 
   p= markdown @blog.body
 
