@@ -1,0 +1,5 @@
+- if can? :update, Blog
+  nav.breadcrumb.blogcrumb
+    = link_to icon('fas', 'file-alt'), toggle_status_blog_path(blog), style: "#{'color: red' if blog.draft?}"
+    = link_to icon('fas', 'pen-square'), edit_blog_path(blog)
+    = link_to icon('fas', 'trash'), blog, data: { confirm: 'Are you sure?' }, method: :delete

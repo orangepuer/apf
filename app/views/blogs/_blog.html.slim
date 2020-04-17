@@ -1,11 +1,5 @@
 .blog-post
   h2.blog-post-title = link_to blog.title.upcase, blog
   p.blog-post-meta = "Published #{distance_of_time_in_words(blog.created_at, Time.now)} ago"
-  - if can? :update, Blog
-    p.blog-post-meta
-      = link_to blog.status, toggle_status_blog_path(blog)
-      '  /
-      = link_to 'Edit', edit_blog_path(blog)
-      '  /
-      = link_to 'Delete Post', blog, data: { confirm: 'Are you sure?' }, method: :delete
+  = render 'blogs/admin_actions', blog: blog
   p = blog.body
