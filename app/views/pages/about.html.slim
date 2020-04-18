@@ -1,7 +1,10 @@
-h1 About me
-hr
-.row
-  .col-md-4
-    = image_tag "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=robohash&f=y&s=300", alt: "Profile image", width: 300
-  .col-md-8
-    p Here could be information about me
+.app-card-container
+  .card
+    h1 About me
+    hr
+    .row
+      .col-md-4
+        = image_tag "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=robohash&f=y&s=300",
+                alt: "Profile image", width: 200, class: 'profile-img'
+      .col-md-8
+        p Here could be information about me

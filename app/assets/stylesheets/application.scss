@@ -149,3 +149,20 @@ body {
 .app-footer {
   color: white;
 }
+
+.app-card-container {
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+  background-color: rgba(47, 43, 43, 0.5);
+}
+
+.app-card-container a {
+  color: #3a84df;
+}
+
+.profile-img {
+  border: 1px solid #2f2a2a;
+}
