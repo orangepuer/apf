@@ -8,3 +8,24 @@
                 alt: "Profile image", width: 200, class: 'profile-img'
       .col-md-8
         p Here could be information about me
+        p
+          button.btn.btn-primary[type='button'
+          data-toggle='collapse'
+          data-target='#jobHistory'
+          aria-expanded='false'
+          aria-controls='jobHistory']
+            | jobHistory
+          button.btn.btn-primary[type='button'
+          data-toggle='collapse'
+          data-target='#education'
+          aria-expanded='false'
+          aria-controls='education'
+          style='margin-left: 5px']
+            | Education
+        p
+          .collapse#jobHistory
+            .card.card-body Job 1
+            .card.card-body Job 2
+          .collapse#education
+            .card.card-body School 1
+            .card.card-body School 2
